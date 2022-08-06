@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Last.Views.PolicyListPage"
+             xmlns:plpvm="clr-namespace:Last.ViewModels">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" HeightRequest="80" BackgroundColor="Indigo" Margin="0">
+                <Label Text="{Binding User.Name}" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center"
+                       FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding User.Surname}" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center"
+                       FontSize="Large" FontAttributes="Bold"/>
+                <Button Text="Get Offer" TextColor="White" HeightRequest="80" HorizontalOptions="EndAndExpand" VerticalOptions="Center" BorderWidth="2" 
+                         BackgroundColor="Indigo" Clicked="Button_Clicked"/>
+            </StackLayout>
+            <ListView ItemsSource="{Binding Policies}" BackgroundColor="AliceBlue" Margin="0" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding SirketAdi}" TextColor="Black" FontSize="Medium" VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
+                                <Label Text="{Binding PoliceUrunGrubu}" TextColor="Indigo" FontSize="Medium" VerticalTextAlignment="Center"
+                                       HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" VerticalOptions="Center" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

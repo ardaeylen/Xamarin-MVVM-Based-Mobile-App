@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Last.Views.DetailedPage"
+             xmlns:dpvm="clr-namespace:Last.ViewModels">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="AliceBlue">
+            <StackLayout Orientation="Horizontal" HeightRequest="80" BackgroundColor="Indigo" Margin="0">
+                <Label Text="{Binding User.Name}" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center"
+                       FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding User.Surname}" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center"
+                       FontSize="Large" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" BackgroundColor="AliceBlue" Spacing="25">
+                <Label Text="Poliçe Bilgileri" TextColor="DodgerBlue" FontSize="Large" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center" VerticalOptions="Fill" BackgroundColor="Azure" FontAttributes="Bold"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Poliçe Tipi" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.Tip}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Poliçe Numarası" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.PoliceNo}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Şirket Adı" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.SirketAdi}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Poliçe Ürün Grubu" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.PoliceUrunGrubu}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Tanzim Tarihi" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.TanzimTarihi}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Vade Tarihi" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.VadeTarihi}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Borcunuz" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                    <Label Text="{Binding Policy.Borc}" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" BackgroundColor="OrangeRed" HeightRequest="100">
+                    <Label Text="{Binding CarPolicy.Marka}" TextColor="White" HorizontalOptions="Start" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="{Binding CarPolicy.Model}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="Large"/>
+                    <Label Text="{Binding CarPolicy.Plaka}" TextColor="White" HorizontalOptions="End" VerticalOptions="Center" HorizontalTextAlignment="End" 
+                           VerticalTextAlignment="Center" FontSize="Large"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

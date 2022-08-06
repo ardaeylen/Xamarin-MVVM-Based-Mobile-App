@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Last.Views.SignUpPage"
+             xmlns:spvm="clr-namespace:Last.ViewModels">
+    <ContentPage.BindingContext>
+        <spvm:SignUpPageViewModel></spvm:SignUpPageViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid Margin="10,0,10,0" BackgroundColor="GhostWhite" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" x:Name="UsernameRow"/>
+                <RowDefinition Height="80" x:Name="NameRow"/>
+                <RowDefinition Height="80" x:Name="SurnameRow"/>
+                <RowDefinition Height="80" x:Name="PasswordRow"/>
+                <RowDefinition Height="80" x:Name="ConfirmRow"/>
+                <RowDefinition Height="80" x:Name="Successlbl"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" x:Name="Labels"/>
+                <ColumnDefinition Width="2*" x:Name="Entries"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Username" Grid.Column="0" Grid.Row="0" FontSize="Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Text="{Binding Username}" Grid.Column="1" Grid.Row="0" FontSize="Medium" VerticalTextAlignment="Center"/>
+            <Label Text="Name" Grid.Column="0" Grid.Row="1" FontSize="Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Text="{Binding Name}" Grid.Column="1" Grid.Row="1" FontSize="Medium" VerticalTextAlignment="Center"/>
+            <Label Text="Surname" Grid.Column="0" Grid.Row="2" FontSize="Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Text="{Binding Surname}" Grid.Column="1" Grid.Row="2" FontSize="Medium" VerticalTextAlignment="Center"/>
+            <Label Text="Password" Grid.Column="0" Grid.Row="3" FontSize="Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+            <Entry Text="{Binding Password}" Grid.Column="1" Grid.Row="3" FontSize="Medium" VerticalTextAlignment="Center"/>
+            <Button Text="Confirm" Command="{Binding SignUpCommand}" Grid.ColumnSpan="2" Grid.Row="4" FontSize="Medium" BackgroundColor="DodgerBlue" TextColor="White" BorderColor="Black" CornerRadius="10" BorderWidth="2"/>
+            <Label Text="{Binding Signinstatus}" Grid.ColumnSpan="2" Grid.Row="4" FontSize="19" VerticalOptions="Center" HorizontalOptions="Center" TextColor="DodgerBlue"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

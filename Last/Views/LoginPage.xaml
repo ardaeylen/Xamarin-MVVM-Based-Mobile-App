@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Last.Views.LoginPage"
+             xmlns:lpvm="clr-namespace:Last.ViewModels">
+    <ContentPage.BindingContext>
+        <lpvm:LoginPageViewModel></lpvm:LoginPageViewModel>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="White" >
+            <Image Source="Ada.jpg" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" WidthRequest="150" HeightRequest="200" Margin="15"/>
+            <Entry  Placeholder="Username" x:Name="userEntry"  Text="{Binding Username}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="AliceBlue"  WidthRequest="200" Margin="10" FontSize="19.5"/>
+            <Entry  Placeholder="Password" x:Name="passwordEntry"  Text="{Binding Password}" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="AliceBlue"  WidthRequest="200" Margin="10" FontSize="19.5" IsPassword="True"  />
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" WidthRequest="200">
+                <Button Text="Login" x:Name="loginButton" Command="{Binding Logincommand} " BackgroundColor="OrangeRed" BorderWidth="2" 
+                        BorderColor="DodgerBlue" CornerRadius="10" HorizontalOptions="StartAndExpand" TextColor="White"/>
+                <Button Text="Sign In" x:Name="signinButton" BackgroundColor="DodgerBlue" BorderWidth="2"  Command="{Binding SignUpCommand}"
+                        BorderColor="DarkOrange" CornerRadius="10" HorizontalOptions="EndAndExpand" TextColor="White" />
+            </StackLayout>
+            <Label TextColor="DodgerBlue" Text="{Binding Loginstatus}" x:Name="loginsucces_lbl" FontSize="20" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Last.Views.AddPolicyPage"
+             xmlns:appvm="clr-namespace:Last.ViewModels">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Spacing="22" Padding="80" BackgroundColor="Honeydew" >
+            <Picker ItemsSource="{Binding Cars}" Title="Aracınızın Markasını Seçiniz" x:Name="MarkaPicker" VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center" WidthRequest="250"/>
+            <Entry Text="{Binding CarPolicy.Model}" Placeholder="Aracınızın Modelini Giriniz" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="250"/>
+            <DatePicker Date="{Binding CarPolicy.UretimYili}" IsEnabled="True" VerticalOptions="FillAndExpand" HorizontalOptions="Center" WidthRequest="250"/>
+            <Entry Text="{Binding CarPolicy.Plaka}" Placeholder="Plakanızı Giriniz" VerticalOptions="FillAndExpand" WidthRequest="250" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+            <Picker ItemsSource="{Binding InsuranceCompanies}" Title="Teklif Almak İstediğiniz Sigorta Şirketini Seçiniz" x:Name="CompanyPicker" VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Center" WidthRequest="250" />
+            <Button Text="Onayla"  HorizontalOptions="Center" VerticalOptions="FillAndExpand" BorderWidth="2" BorderColor="White" CornerRadius="10" WidthRequest="250"
+                    Command="{Binding AddPolicyCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
